@@ -3,7 +3,7 @@ const express = require("express");
 const serveIndex = require("serve-index");
 const app = express();
 const port: number = 3000;
-const publicDir = "public";
+const publicDir = "../front/dist";
 
 app.use((req, res, next) => {
   console.log("req: ", req.url, this);
