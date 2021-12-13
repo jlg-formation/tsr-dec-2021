@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/server.js",
+    "start": "nodemon src/server.js",
+    "start:prod": "node build/server.js",
     "build": "tsc"
   },
   "author": "",
@@ -16,6 +17,8 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.12",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
     "typescript": "^4.5.3"
   }
 }
