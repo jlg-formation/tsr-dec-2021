@@ -1,6 +1,7 @@
+import express from "express";
+import serveIndex from "serve-index";
+
 console.log("About to start the server...");
-const express = require("express");
-const serveIndex = require("serve-index");
 const app = express();
 const port: number = 3000;
 const publicDir = "../front/dist";
