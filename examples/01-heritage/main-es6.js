@@ -34,4 +34,7 @@
   const bob = new Employee("Bob", 34, 2300);
   bob.sayHello();
   bob.congrats();
+
+  const result = bob instanceof Person;
+  console.log("result: ", result);
 })();
