@@ -3,7 +3,7 @@ import serveIndex from "serve-index";
 
 console.log("About to start the server...");
 const app = express();
-const port: number = 3000;
+const port: number = +(process.env.ORSYS_PORT || 3000);
 const publicDir = "../front/dist";
 
 app.use((req, res, next) => {
