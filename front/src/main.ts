@@ -5,6 +5,7 @@ function main() {
   // main function
   console.log("start front");
   const m = new Multiplication();
+  m.render();
 }
 
 main();
