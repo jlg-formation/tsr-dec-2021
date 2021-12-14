@@ -58,7 +58,7 @@ export class Multiplication {
     const r0 = 200;
 
     const n = this.sampleNbr;
-    const p = 20;
+    const p = this.multiplicator;
 
     for (let i = 0; i < n; i++) {
       console.log("i: ", i);

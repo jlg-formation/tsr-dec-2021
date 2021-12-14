@@ -9,27 +9,32 @@ export class Configurator {
   };
 
   constructor() {
-    const sampleNbrInput = document.querySelector("input.sampleNbr");
-    if (!(sampleNbrInput instanceof HTMLInputElement)) {
-      throw new Error("oups.");
-    }
-    console.log("sampleNbrInput: ", sampleNbrInput);
-    sampleNbrInput.value = this.config.sampleNbr + "";
-    const sampleNbrLabel = document.querySelector("div.sampleNbr");
-    sampleNbrLabel.innerHTML = this.config.sampleNbr + "";
-
-    sampleNbrInput.addEventListener("input", (evt: Event) => {
-      console.log("evt: ", evt);
-
-      this.config.sampleNbr = +(evt.target as HTMLInputElement).value;
-      const sampleNbrLabel = document.querySelector("div.sampleNbr");
-      sampleNbrLabel.innerHTML = this.config.sampleNbr + "";
-
-      this.callback(this.config);
-    });
+    this.init("sampleNbr");
+    this.init("multiplicator");
   }
 
   onChange(callback: (conf: Config) => void) {
     this.callback = callback;
+  }
+
+  init(className: keyof Config) {
+    const input = document.querySelector("input." + className);
+    if (!(input instanceof HTMLInputElement)) {
+      throw new Error("oups.");
+    }
+    console.log("input: ", input);
+    input.value = this.config[className] + "";
+    const label = document.querySelector("div." + className);
+    label.innerHTML = this.config[className] + "";
+
+    input.addEventListener("input", (evt: Event) => {
+      console.log("evt: ", evt);
+
+      this.config[className] = +(evt.target as HTMLInputElement).value;
+      const label = document.querySelector("div." + className);
+      label.innerHTML = this.config[className] + "";
+
+      this.callback(this.config);
+    });
   }
 }
