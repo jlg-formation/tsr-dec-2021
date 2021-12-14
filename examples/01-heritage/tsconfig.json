@@ -6,6 +6,7 @@
     "outDir": "build",
     "esModuleInterop": true,
     "sourceMap": true,
-    "module": "CommonJS"
+    "module": "CommonJS",
+    "noImplicitOverride": true
   }
 }

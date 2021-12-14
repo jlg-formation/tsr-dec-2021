@@ -20,6 +20,10 @@ class Employee extends Person {
     this.salary *= 1.1;
     console.log("Yeah! my salary is now " + this.salary);
   }
+
+  override sayHello(): void {
+    super.sayHello();
+  }
 }
 
 const bob = new Employee("Bob", 34, 2300);
