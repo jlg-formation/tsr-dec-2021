@@ -1,10 +1,22 @@
 export class Multiplication {
+  public multiplicator: number = 2;
+  public sampleNbr: number = 10;
+
   constructor() {
     console.log("aaa instantiate new multiplication");
   }
 
+  public clean() {
+    const gPoint = document.querySelector("svg g.point");
+    gPoint.innerHTML = "";
+    const gLine = document.querySelector("svg g.line");
+    gLine.innerHTML = "";
+  }
+
   public render() {
     console.log("I render");
+
+    this.clean();
 
     const gPoint = document.querySelector("svg g.point");
     console.log("gPoint: ", gPoint);
@@ -13,7 +25,7 @@ export class Multiplication {
     const cy0 = 220;
     const r0 = 200;
 
-    const n = 10;
+    const n = this.sampleNbr;
 
     for (let i = 0; i < n; i++) {
       console.log("i: ", i);
@@ -45,7 +57,7 @@ export class Multiplication {
     const cy0 = 220;
     const r0 = 200;
 
-    const n = 100;
+    const n = this.sampleNbr;
     const p = 20;
 
     for (let i = 0; i < n; i++) {
@@ -73,10 +85,10 @@ export class Multiplication {
   }
 
   public setMultiplicator(multiplicator: number) {
-    throw new Error("Method not implemented.");
+    this.multiplicator = multiplicator;
   }
 
   public setSampleNbr(sampleNbr: number) {
-    throw new Error("Method not implemented.");
+    this.sampleNbr = sampleNbr;
   }
 }
