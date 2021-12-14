@@ -1,5 +1,21 @@
-$body-color: red;
+svg {
+  width: 50em;
+  height: 30em;
+  background-color: #eee;
 
-body {
-  color: $body-color;
+  circle {
+    fill: transparent;
+    stroke: black;
+  }
+
+  g.point {
+    circle {
+      fill: black;
+      stroke: black;
+    }
+  }
+
+  line {
+    stroke: black;
+  }
 }
