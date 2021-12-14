@@ -3,7 +3,7 @@ export class Multiplication {
     console.log("aaa instantiate new multiplication");
   }
 
-  render() {
+  public render() {
     console.log("I render");
 
     const gPoint = document.querySelector("svg g.point");
@@ -38,7 +38,7 @@ export class Multiplication {
     this.renderLine();
   }
 
-  renderLine() {
+  public renderLine() {
     const gLine = document.querySelector("svg g.line");
 
     const cx0 = 220;
@@ -70,5 +70,13 @@ export class Multiplication {
 
       gLine.appendChild(line);
     }
+  }
+
+  public setMultiplicator(multiplicator: number) {
+    throw new Error("Method not implemented.");
+  }
+
+  public setSampleNbr(sampleNbr: number) {
+    throw new Error("Method not implemented.");
   }
 }

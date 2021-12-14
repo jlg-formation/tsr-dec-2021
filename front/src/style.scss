@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5em;
+}
+
 svg {
   width: 50em;
   height: 30em;
